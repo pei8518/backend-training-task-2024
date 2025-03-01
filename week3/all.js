@@ -108,7 +108,7 @@ function calculateTotalPrice(){
 // 使用 filter() 篩選未有購買紀錄的會員
 function filterNoPurchaseMember(members, purchasedMembers){
     const purchasedNames = purchasedMembers.map(member => member.name);
-    console.log("已購買課程的會員名單:", purchasedNames);
+    console.log("已購買課程的會員名單:", purchasedNames); // debug: 檢查已購買的會員名單
     return members.filter(member => !purchasedNames.includes(member));
 };
 
@@ -118,8 +118,8 @@ addPurchaseRecord("Alice", 4);
 addPurchaseRecord("Bob", 12);
 addPurchaseRecord("Charlie", 25);
 addPurchaseRecord("Hannah", 50);
-// addPurchaseRecord("名稱", 0);
-// addPurchaseRecord("Claire", 0);
+addPurchaseRecord("名稱", "“課程數量");
+// addPurchaseRecord("Claire", 0); 測試用
 
 console.log(purchaseRecords);
 // 測試
